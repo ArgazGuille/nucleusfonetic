@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nucleus sounds - Botones con sonidos</title>
+	<style>
+		.grid-container {
+			display: grid;
+			grid-template-rows: repeat(7, 1fr);
+			grid-template-columns: 1fr;
+			gap: 10px;
+			justify-items: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.button {
+			width: 200px;
+			height: 50px;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			cursor: pointer;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+		}
+	</style>
+</head>
+<body>
+	<h1>Nucleus sounds</h1>
+	<div class="grid-container">
+		<button class="button" onclick="reproducirSonido('wood.mp3')">High Fall</button>
+		<audio id="wood.mp3" src="D:\Botones\wood.mp3"></audio>
+
+		<button class="button" onclick="reproducirSonido('Leader.mp3')">Low Fall</button>
+		<audio id="Leader.mp3" src="D:\Botones\leader.mp3"></audio>
+
+		<button class="button" onclick="reproducirSonido('oil.mp3')">Low Rise</button>
+		<audio id="oil.mp3" src="D:\Botones\oil.mp3"></audio>
+
+		<button class="button" onclick="reproducirSonido('city.mp3')">High Rise</button>
+		<audio id="city.mp3" src="D:\Botones\city.mp3"></audio>
+
+		<button class="button" onclick="reproducirSonido('Olive.mp3')">Fall Rise</button>
+		<audio id="Olive.mp3" src="D:\Botones\Olive.mp3"></audio>
+
+		<button class="button" onclick="reproducirSonido('Contest.mp3')">Rise Fall</button>
+		<audio id="Contest.mp3" src="D:\Botones\Contest.mp3"></audio>
+
+		<button class="button" onclick="reproducirSonido('tree.mp3')">Mid Level</button>
+		<audio id="tree.mp3" src="D:\Botones\tree.mp3"></audio>
+	</div>
+
+	<script>
+		function reproducirSonido(nombreSonido) {
+			var audio = document.getElementById(nombreSonido);
+			audio.play();
+		}
+	</script>
+</body>
+</html>
